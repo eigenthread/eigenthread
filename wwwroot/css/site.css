@@ -20,3 +20,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.call-to-action {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.welcome-txt {
+    padding-bottom: 4rem;
+}
