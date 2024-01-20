@@ -18,7 +18,7 @@ namespace eigenthread.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Trending()
         {
             return View();
         }
