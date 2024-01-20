@@ -14,11 +14,10 @@ class UsptoBulkdataSpider(scrapy.Spider):
         # print(response.body)
         
         json_response = json.loads(response.body)
-        claimText = json_response.get('claimText')
-        #print(claimText)
-
-        #for claim in claimText:
-            #yield {
-                    #'claimText':claim.get('claimText')
-                #}
+        results = json_response.get('results')
+        
+        for result in results:
+            yield {
+                    'abstractText': result.get('abstractText')
+                }
         
