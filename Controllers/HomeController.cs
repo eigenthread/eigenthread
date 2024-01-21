@@ -18,7 +18,7 @@ namespace eigenthread.Controllers
             return View();
         }
 
-        public IActionResult Trending()
+        public IActionResult ClusterAnalysis()
         {
             return View();
         }
