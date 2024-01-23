@@ -26,18 +26,32 @@ class UsptoBulkdataSpider(scrapy.Spider):
         time_frequency = time_duration // time_interval
         
         # use the pandas library to populate a range of dates
-        date_range = pd.date_range(start=fromDate, end=toDate, freq=time_frequency)
+        dateRange = pd.date_range(start=fromDate, end=toDate, freq=time_frequency)
         
         # convert pandas calculation to desired format
-        desired_time_format = date_range.strftime("%Y-%m-%d").tolist()
-        print("N equal duration dates : " + str(desired_time_format))
-        print("The data type of the pandas object is : " + str(type(desired_time_format)))
-        print("The number of elements in the formatted-time list is : ", len(desired_time_format))
+        desiredTimeFormat = dateRange.strftime("%Y-%m-%d").tolist()
+        print("N equal duration dates : " + str(desiredTimeFormat))
+        print("The data type of the pandas object is : " + str(type(desiredTimeFormat)))
+        print("The number of elements in the formatted-time list is : ", len(desiredTimeFormat))
         
-        # loop through time intervals and assign each interval to a spider GET command and concatenate the JSON results 
-        # to a master JSON file
+        # loop through time intervals
+        i = 0
+        while i < len(desiredTimeFormat):
+            time0 = desiredTimeFormat[i]
+            i = i + 1
+            time1 = desiredTimeFormat[i]
+            
+            # insert time interval elements into url scrapy request
+            url0 = f"https://developer.uspto.gov/ibd-api/v1/application/publications?inventionSubjectMatterCategory=utility&publicationFromDate={time0}"
+            url1 = "&"
+            url2 = f"publicationToDate={time1}"
+            
+            # concatenate url string
+            url3 = url0 + url1 + url2
+            
+            yield scrapy.Request(url= url3, callback=self.parse, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'})
         
-        yield scrapy.Request(url='https://developer.uspto.gov/ibd-api/v1/application/publications?inventionSubjectMatterCategory=utility&publicationFromDate=1994-02-08&publicationToDate=2020-02-08', callback=self.parse, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'})
+        #yield scrapy.Request(url= 'https://developer.uspto.gov/ibd-api/v1/application/publications?inventionSubjectMatterCategory=utility&publicationFromDate=1994-02-08&publicationToDate=2020-02-08', callback=self.parse, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'})
 
     def parse(self, response):
         # yield response.follow(url='https://developer.uspto.gov/ibd-api/v1/application/publications?inventionSubjectMatterCategory=utility&publicationFromDate=1994-02-08&publicationToDate=2020-02-08', callback=self.parse, headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'})
