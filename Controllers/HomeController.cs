@@ -18,6 +18,21 @@ namespace eigenthread.Controllers
             return View();
         }
 
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Agreement()
+        {
+            return View();
+        }
+
         public IActionResult ClusterAnalysis()
         {
             return View();
