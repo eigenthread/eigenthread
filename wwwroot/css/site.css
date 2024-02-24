@@ -52,13 +52,15 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/*
+  .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
+*/
 
 html {
-  position: relative;
-  min-height: 100%;
+  font-size: 62.5%;
+
 }
 
 body {
@@ -69,8 +71,7 @@ body {
 }
 
 /*
-    "main" is section-hero class
-*/
+   
 main {
     background-color: #d3f9d8;
     padding: 2.4rem;
@@ -113,3 +114,4 @@ main {
 .hero-img {
     width: 100%;
 }
+    */
