@@ -177,19 +177,19 @@
 /**************************/
 
 .section-cta {
-    padding: 9.6rem 0 12.8rem;
+    padding: 9.6rem 12.8rem;
 }
 
-cta {
+.cta {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
     /* background-color: #e67e22 */
     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
     border-radius: 11px;
 }
 
 .cta-text-box {
-    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    padding: 16.0rem 6.4rem 6.4rem 6.4rem;
     color: #45260a;
 }
 
@@ -207,7 +207,7 @@ cta {
 
 .cta-img-box {
     background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)),
-        url("~/img/cta_smiling_woman.png");
+        url("../img/Eiganusa_Newsletter.png");
     background-size: cover;
     background-position: center;
 }
