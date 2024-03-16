@@ -23,7 +23,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 3.2rem;
+    gap: 4.8rem;
 }
 
 .main-nav-link:link, .main-nav-link:visited {
@@ -207,7 +207,9 @@
 
 .cta-img-box {
     background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)),
-        url("../img/Eiganusa_Newsletter.png");
+        url("../img/pair_laughing.png");
+    width: 100%;
+    vertical-align: middle;
     background-size: cover;
     background-position: center;
 }
