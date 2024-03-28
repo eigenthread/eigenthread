@@ -18,6 +18,30 @@ namespace eigenthread.Controllers
             return View();
         }
 
+        /* button for e-Books */
+        public IActionResult Consulting()
+        {
+            return View();
+        }
+
+        /* button for e-Books */
+        public IActionResult EBooks()
+        {
+            return View();
+        }
+
+        /* button for Webcrawlers */
+        public IActionResult Webcrawlers()
+        {
+            return View();
+        }
+
+        /* button for DailyBlog */
+        public IActionResult DailyBlog()
+        {
+            return View();
+        }
+
         public IActionResult Agreement()
         {
             return View();
