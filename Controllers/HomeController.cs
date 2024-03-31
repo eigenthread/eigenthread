@@ -19,12 +19,6 @@ namespace eigenthread.Controllers
         }
 
         /* button for e-Books */
-        public IActionResult Consulting()
-        {
-            return View();
-        }
-
-        /* button for e-Books */
         public IActionResult EBooks()
         {
             return View();
