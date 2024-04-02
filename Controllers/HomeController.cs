@@ -30,12 +30,6 @@ namespace eigenthread.Controllers
             return View();
         }
 
-        /* button for DailyBlog */
-        public IActionResult DailyBlog()
-        {
-            return View();
-        }
-
         public IActionResult Agreement()
         {
             return View();
