@@ -1,6 +1,6 @@
 # probability density functions for time periods of relative tech content dependent upon year of innovation 
 # implies more results given one time period = need more spiders for more precision acting in parallel
-# where each spider needs its own User-Agent : contribution from Kelly Christiansen
+# where each spider needs its own User-Agent.
 
 import scrapy
 import json
