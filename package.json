@@ -1,0 +1,22 @@
+
+  {
+    "name": "patentprepper",
+    "version": "1.0.0",
+    "description": "USPTO patent search application",
+    "default": "Webcrawlers.cshtml",
+    "scripts": {
+      "start": "parcel Webcrawlers.cshtml",
+      "build": "parcel build Webcrawlers.cshtml --dist-dir ./dist"
+    },
+    "author": "Alexander Eul",
+    "license": "MIT",
+    "devDependencies": {
+      "parcel": "^2.0.0-beta.1",
+      "sass": "^1.26.10"
+    },
+    "dependencies": {
+      "core-js": "^3.6.5",
+      "fractional": "^1.0.0",
+      "regenerator-runtime": "^0.13.7"
+    }
+  }
