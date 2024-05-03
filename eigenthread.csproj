@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\js\views\" />
     <Folder Include="wwwroot\sass\" />
   </ItemGroup>
 
