@@ -30,7 +30,7 @@ namespace eigenthread.Controllers
             return View();
         }
 
-        public IActionResult Agreement()
+        public IActionResult PrivacyTerms()
         {
             return View();
         }
