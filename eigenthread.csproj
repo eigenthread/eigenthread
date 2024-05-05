@@ -14,9 +14,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\js\views\" />
-    <Folder Include="wwwroot\sass\" />
-  </ItemGroup>
-
 </Project>
