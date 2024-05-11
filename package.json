@@ -1,0 +1,25 @@
+{
+  "name": "patentprepper-dynamicsearch",
+  "version": "1.0.0",
+  "description": "A data-visualization dashboard for displaying USPTO filed intellectual-property",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eigenthread/eigenthread.git"
+  },
+  "keywords": [
+    "uspto",
+    "database",
+    "webscraper",
+    "dashboard"
+  ],
+  "author": "Alexander Paul Eul",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/eigenthread/eigenthread/issues"
+  },
+  "homepage": "https://github.com/eigenthread/eigenthread#readme"
+}
