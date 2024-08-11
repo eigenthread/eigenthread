@@ -437,8 +437,11 @@
 }
 
 .testimonial-name {
-    font-size: 1.6rem;
-    color: #777;
+    /*font-size: 1.6rem;*/
+    /*color: #777;*/
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #333;
 }
 
 .gallery {
