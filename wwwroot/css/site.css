@@ -444,6 +444,10 @@
     color: #333;
 }
 
+.testimonials-container img {
+    margin: 20px; /* Adjust the value as needed */
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
