@@ -667,3 +667,26 @@
     outline: none;
     background-color: #fff;
 }
+
+.form__btn {
+    display: none;
+}
+
+/* Augmented CSS class between general page and E-Commerce page */
+
+.copyright__aug {
+    margin-top: auto;
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--color-light--1);
+}
+
+.twitter-link:link, .twitter-link:visited {
+    color: var(--color-light--1);
+    transition: all 0.2s;
+}
+
+.twitter-link:hover, .twitter-link:active {
+    color: var(--color-light--2);
+}
+
