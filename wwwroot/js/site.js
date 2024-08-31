@@ -17,6 +17,15 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+if (navigator.geolocation)
+    navigator.geoLocation.getCurrentPosition(
+        function (position) {
+            console.log(position);
+        },
+        function () {
+            alert('Could not get your position');
+        }
+    );
 
 //////////////////////////////////////////////////////
 // make mobile navigation work
