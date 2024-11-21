@@ -21,6 +21,15 @@
             bottom: 0 !important;
             position: fixed !important;
         }
+        .cc-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +53,7 @@
     <main>
         @RenderBody()
     </main>
+    <div class="cc-overlay"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script>
         window.addEventListener("load", function () {
@@ -61,7 +71,7 @@
                     "message": "This website uses cookies to ensure you get the best experience on our website.",
                     "dismiss": "Got it!",
                     "link": "Learn more",
-                    "href": "/PrivacyTerms"
+                    "href": "/PrivacyTerms",
                 },
                 "position": "bottom",
                 "container": "body",
@@ -72,8 +82,5 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
