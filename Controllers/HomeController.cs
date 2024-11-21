@@ -18,13 +18,13 @@ namespace eigenthread.Controllers
             return View();
         }
 
-        /* button for e-Books */
+        /* remove EBooks and consolidate to Products */
         public IActionResult EBooks()
         {
             return View();
         }
 
-        /* button for Webcrawlers */
+        /* remove Webcrawlers and consolidate to Products */
         public IActionResult Webcrawlers()
         {
             return View();
@@ -39,7 +39,13 @@ namespace eigenthread.Controllers
         {
             return View();
         }
+
+        /* remove Patents and consolidate to Products */
         public IActionResult Patents()
+        {
+            return View();
+        }
+        public IActionResult Products()
         {
             return View();
         }
