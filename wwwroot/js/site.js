@@ -61,3 +61,39 @@ function checkFlexGap() {
 checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+
+//////////////////////////////////////////////////////
+
+// Check if cookies are already accepted
+document.addEventListener('DOMContentLoaded', function () {
+    if (!getCookie("cookieConsent")) {
+        document.getElementById("cookieConsentBanner").style.display = "block";
+    }
+});
+
+// Function to manage cookies (shows additional preferences)
+function manageCookies() {
+    // Logic for showing preferences (essential, analytics, marketing)
+    alert("Implement preferences here, like allowing only essential cookies.");
+}
+
+// Function to hide the banner
+function hideBanner() {
+    document.getElementById("cookieConsentBanner").style.display = "none";
+}
+
+// Helper function to set a cookie
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));)
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+}
