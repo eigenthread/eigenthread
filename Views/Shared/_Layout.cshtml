@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/eigenthread.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/queries.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <style>
+        .cc-window {
+            width: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            position: fixed !important;
+        }
+    </style>
 </head>
 <body>
     <header class="header nav-open">
@@ -21,7 +31,7 @@
        <nav class="main-nav">
            <ul class="main-nav-list">
                 <li><a class="main-nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a href="#bundle"class="main-nav-link">PatentPrepper Concierge&Bundle &reg;</a></li>
+                <li><a href="#bundle" class="main-nav-link">PatentPrepper Concierge&Bundle &reg;</a></li>
                 <li><a href="https://www.linkedin.com/in/alexander-eul-a04395252" target="_blank" class="main-nav-link nav-cta">LIVE CHAT NOW</a></li>
            </ul>
        </nav>
@@ -52,17 +62,18 @@
                     "dismiss": "Got it!",
                     "link": "Learn more",
                     "href": "/PrivacyTerms"
-                }
-
+                },
+                "position": "bottom",
+                "container": "body",
+                "containerClasses": "full-width"
             });
         });
-        @RenderSection("Scripts", required: false)
     </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
