@@ -97,6 +97,15 @@
     padding: 4.8rem 0 9.6rem 0;
 }
 
+.full-height {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
 .hero {
     max-width: 130rem;
     margin: 0 auto;
