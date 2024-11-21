@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/eigenthread.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/queries.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
     <style>
         .cc-window {
             width: 100% !important;
@@ -20,6 +19,28 @@
             right: 0 !important;
             bottom: 0 !important;
             position: fixed !important;
+            z-index: 9999; /* Ensure this is higher than .cc-overlay */
+            background-color: var(--color-background); /* Use a variable for background color */
+            padding: 1rem; /* Use rem for padding */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cc-window p {
+            margin: 0;
+            color: var(--color-text); /* Use a variable for text color */
+        }
+        .cc-window button {
+            background-color: var(--color-primary); /* Use a variable for button background color */
+            color: var(--color-button-text); /* Use a variable for button text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 0.25rem;
+        }
+        .cc-window button:hover {
+            background-color: var(--color-primary-dark); /* Use a variable for button hover background color */
         }
         .cc-overlay {
             position: fixed;
@@ -53,34 +74,90 @@
     <main>
         @RenderBody()
     </main>
-    <div class="cc-overlay"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-    <script>
-        window.addEventListener("load", function () {
-            window.cookieconsent.initialise({
-                "palette": {
-                    "popup": {
-                        "background": "#000"
-                    },
-                    "button": {
-                        "background": "#f1d600"
-                    }
-                },
-                "theme": "classic",
-                "content": {
-                    "message": "This website uses cookies to ensure you get the best experience on our website.",
-                    "dismiss": "Got it!",
-                    "link": "Learn more",
-                    "href": "/PrivacyTerms",
-                },
-                "position": "bottom",
-                "container": "body",
-                "containerClasses": "full-width"
-            });
-        });
-    </script>
+
+    <!-- Cookies Banner -->
+    <div class="cc-window" id="cookieConsentBanner">
+        <p>We use cookies to ensure you get the best experience on our website. <a href="/privacy">Learn more</a></p>
+        <div class="cc-buttons">
+            <button onclick="acceptCookies()">Accept</button>
+            <button onclick="manageCookies()">Manage Preferences</button>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        }
+
+        // Check if the user has already accepted cookies
+        if (getCookie("cookieConsent") !== "accepted") {
+            document.getElementById("cookieConsentBanner").style.display = "block";
+        }
+
+        function acceptCookies() {
+            setCookie("cookieConsent", "accepted", 365);
+            document.getElementById("cookieConsentBanner").style.display = "none";
+        }
+
+        function manageCookies() {
+            // Implement your manage cookies logic here
+        }
+    </script>
+    <style>
+        .cc-window {
+            width: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            position: fixed !important;
+            z-index: 9999; /* Ensure this is higher than .cc-overlay */
+            background-color: var(--color-background); /* Use a variable for background color */
+            padding: 2rem; /* Increase padding for larger size */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem; /* Increase font size */
+        }
+        .cc-window p {
+            margin: 0;
+            color: var(--color-text); /* Use a variable for text color */
+        }
+        .cc-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .cc-window button {
+            background-color: var(--color-primary); /* Use a variable for button background color */
+            color: var(--color-button-text); /* Use a variable for button text color */
+            border: none;
+            padding: 0.75rem 1.5rem; /* Increase padding for buttons */
+            cursor: pointer;
+            border-radius: 0.25rem;
+            font-size: 1rem; /* Increase font size for buttons */
+        }
+        .cc-window button:hover {
+            background-color: var(--color-primary-dark); /* Use a variable for button hover background color */
+        }
+        .cc-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+    </style>
 </body>
 </html>
