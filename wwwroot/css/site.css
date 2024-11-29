@@ -212,6 +212,14 @@
     width: 100%;
 }
 
+/*  Make book shelf pictures larger */
+.step-img-box .step-img {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 500px; /* Set a maximum width if necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 /**************************/
 /* MEALS SECTION */
 /**************************/
