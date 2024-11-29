@@ -219,6 +219,31 @@
     height: auto; /* Maintain aspect ratio */
 }
 
+.glowing-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.glowing-button:hover {
+background-color: #cc0000;
+box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
+.step-img-box {
+    text-align: center; /* Center the button below the image */
+    margin-bottom: 2rem; /* Add some space between the boxes */
+}
+
+
 
 /**************************/
 /* MEALS SECTION */
