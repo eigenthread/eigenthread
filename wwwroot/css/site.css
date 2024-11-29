@@ -30,7 +30,7 @@
 .main-nav-link:link, .main-nav-link:visited {
     display: inline-block;
     text-decoration: none;
-    color: #333;
+    color: #e9ecef;
     font-weight: 500;
     font-size: 1.8rem;
     transition: all 0.3s;
