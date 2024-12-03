@@ -525,9 +525,26 @@ box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
 /**************************/
 
 .footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
     padding: 12.8rem 0;
     border-top: 1px solid #eee;
+    background-color: #f8f9fa;
 }
+
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+
+.footer .logo-col,
+.footer .address-col {
+    margin-bottom: 1rem;
+    }
+
 
 .grid--footer {
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
