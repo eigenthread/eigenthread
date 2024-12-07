@@ -97,3 +97,13 @@ function getCookie(name) {
     const parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
 }
+
+// Graphics for neonButton ~ UCSB / Forex
+// place the .MP3 recording into the JS folder!
+const neonButton = document.querySelector('.neon-button');
+
+neonButton.addEventListener('click', () => {
+    const audio = new Audio('CashRegister.mp3');
+
+    audio.play();
+});
