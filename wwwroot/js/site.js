@@ -103,7 +103,7 @@ function getCookie(name) {
 const neonButton = document.querySelector('.neon-button');
 
 neonButton.addEventListener('click', () => {
-    const audio = new Audio('CashRegister.mp3');
+    const audio = new Audio('js/CashRegister.mp3');
 
     audio.play();
 });
