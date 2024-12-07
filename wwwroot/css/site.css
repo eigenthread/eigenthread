@@ -233,6 +233,11 @@
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
+.glowing-button:hover {
+    background-color: #cc0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
 /*  UCSB-FOREX-FUNDRAISER BUTTON   */
 .neon-button {
     font-size: 1.2rem;
@@ -245,7 +250,7 @@
     cursor: pointer;
     box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
     transition: transform 0.2s, box-shadow 0.2s;
-    animation: neoPulse 2s infinite; /* Pulse animation */
+    animation: neoPulse 3s infinite; /* Pulse animation */
 }
 
 /*  HOVER EFFECT   */
@@ -254,9 +259,22 @@
     box-shadow: 0 0 20px #39FF14, 0 0 #39FF14;
 }
 
-.neon-button:hover {
-background-color: #cc0000;
-box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+/*  KEYFRAMES FOR PLEASURABLE PULSE    */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 10px #39FF14, 0 0 60px #39FF14;
+        transform: scale(1.05); /* Slight expansion for 'gentle' pulse */
+    }
+
+    100% {
+        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+        transform: scale(1);
+    }
 }
 
 .step-img-box {
