@@ -243,12 +243,12 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #000;
-    background: #39FF14;
+    background: #e67e22;
     border: none;
     border-radius: 5px;
     padding: 15px 20px;
     cursor: pointer;
-    box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    box-shadow: 0 0 10px #e67e22, 0 0 20px #e67e22;
     transition: transform 0.2s, box-shadow 0.2s;
     animation: neoPulse 3s infinite; /* Pulse animation */
 }
@@ -256,23 +256,23 @@
 /*  HOVER EFFECT   */
 .neon-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px #39FF14, 0 0 #39FF14;
+    box-shadow: 0 0 20px #e67e22, 0 0 #e67e22;
 }
 
 /*  KEYFRAMES FOR PLEASURABLE PULSE    */
 @keyframes neonPulse {
-    0% {
-        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
-        transform: scale(1);
+0% {
+    box-shadow: 0 0 10px #e67e22, 0 0 20px #e67e22;
+    transform: scale(1);
     }
 
     50% {
-        box-shadow: 0 0 10px #39FF14, 0 0 60px #39FF14;
+        box-shadow: 0 0 10px #e67e22, 0 0 60px #e67e22;
         transform: scale(1.05); /* Slight expansion for 'gentle' pulse */
     }
 
     100% {
-        box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+        box-shadow: 0 0 10px #e67e22, 0 0 20px #e67e22;
         transform: scale(1);
     }
 }
