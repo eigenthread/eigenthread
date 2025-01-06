@@ -1,0 +1,22 @@
+﻿
+@page "/"
+@namespace eigenthread.Controllers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>USPTO Patent Search</title>
+    <script>
+        async function callApi() {
+            const response = await fetch('/api/usptopatentsearch/search');
+            const data = await response.json();
+            document.getElementById('api-message').innerText = data.message;
+        }
+    </script>
+</head>
+<body>
+    <h1>USPTO Patent Search</h1>
+    <button onclick="callApi()">Call API</button>
+    <p id="api-message"></p>
+</body>
+</html>
