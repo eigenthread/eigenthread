@@ -1,5 +1,5 @@
 ﻿// File: /Controllers/USPTOPatentSearchController.cs
-using Microsoft.AspNetCore.Mvc;
+u/*sing Microsoft.AspNetCore.Mvc;
 
 namespace eigenthread.Controllers
 {
@@ -8,6 +8,24 @@ namespace eigenthread.Controllers
     public class USPTOPatentSearchController : ControllerBase
     {
         [HttpGet("search")] // Routes to /api/usptopatentsearch/search
+        public IActionResult Search()
+        {
+            return Ok(new { Message = "USPTO Patent Search API is working!" });
+        }
+    }
+}
+*/
+
+// File: /Controllers/USPTOPatentSearchController.cs
+using Microsoft.AspNetCore.Mvc;
+
+namespace eigenthread.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class USPTOPatentSearchController : ControllerBase
+    {
+        [HttpGet("search")]
         public IActionResult Search()
         {
             return Ok(new { Message = "USPTO Patent Search API is working!" });
