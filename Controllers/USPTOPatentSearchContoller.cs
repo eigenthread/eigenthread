@@ -1,5 +1,5 @@
 ﻿// File: /Controllers/USPTOPatentSearchController.cs
-u/*sing Microsoft.AspNetCore.Mvc;
+/*sing Microsoft.AspNetCore.Mvc;
 
 namespace eigenthread.Controllers
 {
