@@ -803,6 +803,21 @@
 
 /* Augmented CSS class between general page and E-Commerce page */
 
+.video-container {
+    height: 100vh
+}
+
+video {
+    max-width: 90%; /* Scales within the container */
+    max-height: 90%; /* Scales within the container */
+}
+
+.custom-controls {
+    margin-top: 20px;
+}
+
+/* Augmented CSS class between general page and E-Commerce page */
+
 .copyright__aug {
     margin-top: auto;
     font-size: 1.3rem;

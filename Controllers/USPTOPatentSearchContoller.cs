@@ -17,6 +17,9 @@ namespace eigenthread.Controllers
 */
 
 // File: /Controllers/USPTOPatentSearchController.cs
+// below is workable solution
+
+/*
 using Microsoft.AspNetCore.Mvc;
 
 namespace eigenthread.Controllers
@@ -32,3 +35,4 @@ namespace eigenthread.Controllers
         }
     }
 }
+*/
