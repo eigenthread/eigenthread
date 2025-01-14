@@ -3,7 +3,29 @@
 }
 
 <section class="section-hero full-height">
-    <div class="hero">
-
+    <div class="hero container-fluid video-container d-flex flex-column justify-content-center align-items-center text-center">
+        <video id="claimConstructionVideo" autoplay muted>
+            <source src="#" type="video/mp4">
+            This is where the video is placed.
+        </video>
+        <!-- custom controls -->
+        <div class="custom-controls d-flex justify-content-center">
+            <button id="playButton" class="btn btn-primary me-2">Play</button>
+            <button id="pauseButton" class="btn btn-secondary">Pause</button>
+        </div>
     </div>
 </section>
+<script>
+    // get video and control buttons
+    const video = document.getElementById('claimConstructionVideo');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    // play "Button Click Event"
+    playButton.addEventListener('click', () => {
+        video.play();
+    });
+    // pause "Button Click Event"
+    pauseButton.addEventListener('click', () => {
+        video.pause();
+    });
+</script>
