@@ -133,7 +133,10 @@ print(repos)
 
 ---
 
-# Claim Constructor Copilot Code to by Copy-Pasted into Colab Notebook
+# Claim Constructor Copilot Code
+
+## copy and paste this code into your Colab Notebook:
+
 ```python
 !pip install transformers datasets scikit-learn
 
