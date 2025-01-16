@@ -9,7 +9,7 @@ This guide provides step-by-step instructions on generating and securely using a
 ## 1. How to Create a Hugging Face Access Token
 1. **Log In to Hugging Face**:
    - Visit [Hugging Face](https://huggingface.co/) and log in.
-   - Create an account if you don’t already have one.
+   - Create an account if you donâ€™t already have one.
 
 2. **Navigate to Settings**:
    - Go to your profile and select **"Settings"** from the dropdown menu.
@@ -114,7 +114,7 @@ The following permissions depend on your use case:
 ---
 
 ## 6. Example Usage
-Here’s a simple script for interacting with Hugging Face using the token:
+Hereâ€™s a simple script for interacting with Hugging Face using the token:
 ```python
 from huggingface_hub import HfApi
 import os
@@ -305,5 +305,5 @@ if __name__ == "__main__":
 
 
 
-## License
-This document is provided for educational purposes. Use at your own discretion and follow Hugging Face’s guidelines.
+# Pluripotent Analytics Terms and Conditions
+
